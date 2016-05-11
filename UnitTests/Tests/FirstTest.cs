@@ -16,14 +16,24 @@ namespace UnitTests.Tests
         [Test]
         public void OpenBrowser()
         {
-            //IWebDriver driver = new FirefoxDriver();
+            IWebDriver driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("http://seleniumsimplified.com/");
+
+            driver.Close();
+            driver.Quit();
+        }
+
+        [Test]
+        public void OpenBrowserBySimpleBrowser()
+        {
             IWebDriver driver = new SimpleBrowserDriver();
             driver.Navigate().GoToUrl("http://seleniumsimplified.com/");
 
             driver.Close();
             driver.Quit();
         }
-        
-        
+
+
+
     }
 }
