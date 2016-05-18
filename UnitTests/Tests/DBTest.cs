@@ -15,6 +15,12 @@ namespace UnitTests.Tests
         {
             getAddressFromDB();
         }
+
+        [Test]
+        public void TestDBConnectivity2()
+        {
+            getAddressFromDB();
+        }
         public List <String> getAddressFromDB()
         {
             using (AdventureWorksLT2012 db = new AdventureWorksLT2012())
@@ -30,5 +36,7 @@ namespace UnitTests.Tests
             }
             
         }
+
+
     }
 }
